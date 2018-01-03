@@ -12,6 +12,7 @@
  
 SetCompressor lzma
 
+[% block modernui %]
 !define MULTIUSER_EXECUTIONLEVEL Highest
 !define MULTIUSER_INSTALLMODE_DEFAULT_CURRENTUSER
 !define MULTIUSER_MUI
@@ -20,6 +21,7 @@ SetCompressor lzma
 [% if ib.py_bitness == 64 %]
 !define MULTIUSER_INSTALLMODE_FUNCTION correct_prog_files
 [% endif %]
+[% endblock modernui %]
 !include MultiUser.nsh
 
 [% block modernui %]
